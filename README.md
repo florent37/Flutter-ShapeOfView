@@ -37,7 +37,10 @@ ShapeOfView came with pre-created shapes :
 
 ```dart
 ShapeOfView(
-  shape: CircleShape(),
+  shape: CircleShape(
+    borderColor: Colors.white, //optional
+    borderWidth: 2, //optional
+  ),
   child: ...
 ```
 
@@ -48,7 +51,9 @@ ShapeOfView(
 ```dart
 ShapeOfView(
   shape: RoundRectShape(
-     borderRadius: BorderRadius.circular(12);
+     borderRadius: BorderRadius.circular(12),
+     borderColor: Colors.white, //optional
+     borderWidth: 2, //optional
   ),
   child: ...
 ```

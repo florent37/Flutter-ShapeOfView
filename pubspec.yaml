@@ -1,6 +1,6 @@
 name: shape_of_view
 description: Give a custom shape to any flutter widget, Material Design 2 ready
-version: 0.0.1
+version: 1.0.0
 author: Florent Champigny <champigny.florent@gmail.com>
 homepage: https://github.com/florent37/Flutter-ShapeOfView
 
