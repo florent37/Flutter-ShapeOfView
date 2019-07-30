@@ -1,6 +1,6 @@
 # flutter_shape_of_view
 
-A new Flutter plugin.
+Give a custom shape to any flutter widget, Material Design 2 ready
 
 # Download
 
