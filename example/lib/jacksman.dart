@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shape_of_view/shape_of_view.dart';
 import 'package:kenburns/kenburns.dart';
+import 'package:shape_of_view/shape_of_view.dart';
 
 class JacksmanPage extends StatelessWidget {
   @override
@@ -59,8 +59,9 @@ class JacksmanPage extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-        )
+        ),
       ],
     );
   }
 }
+

@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_shape_of_view/shape_of_view.dart';
+import 'package:shape_of_view/shape_of_view.dart';
 
 class PolygonShape extends Shape {
   final int numberOfSides;

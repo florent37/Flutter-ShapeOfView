@@ -2,7 +2,7 @@ import 'dart:math';
 import 'package:vector_math/vector_math.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_shape_of_view/shape_of_view.dart';
+import 'package:shape_of_view/shape_of_view.dart';
 
 class RoundRectShape extends Shape {
   final BorderRadius borderRadius;
