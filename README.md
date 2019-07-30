@@ -4,7 +4,7 @@ Give a custom shape to any flutter widget, Material Design 2 ready
 
 # Download
 
-https://pub.dev/packages/kenburns
+https://pub.dev/packages/shape_of_view
 
 ```
 dependencies:
