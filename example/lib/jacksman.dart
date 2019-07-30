@@ -52,7 +52,10 @@ class JacksmanPage extends StatelessWidget {
           child: ShapeOfView(
             height: 100,
             width: 100,
-            shape: CircleShape(),
+            shape: CircleShape(
+              borderColor: Colors.white,
+              borderWidth: 3
+            ),
             elevation: 12,
             child: Image.asset(
               "assets/diagonallayout_hughjackman.jpg",

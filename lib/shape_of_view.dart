@@ -15,6 +15,10 @@ abstract class Shape {
   Path build({Rect rect, double scale});
 }
 
+abstract class BorderShape {
+  void drawBorder(Canvas canvas, Rect rect);
+}
+
 class ShapeOfViewBorder extends ShapeBorder {
   final Shape shape;
 
@@ -55,7 +59,11 @@ class ShapeOfViewBorder extends ShapeBorder {
   }
 
   @override
-  void paint(Canvas canvas, Rect rect, {TextDirection textDirection}) {}
+  void paint(Canvas canvas, Rect rect, {TextDirection textDirection}) {
+    if(shape is BorderShape) {
+      (shape as BorderShape).drawBorder(canvas, rect);
+    }
+  }
 
   @override
   bool operator ==(dynamic other) {
