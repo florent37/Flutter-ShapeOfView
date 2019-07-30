@@ -60,7 +60,7 @@ class ShapeOfViewBorder extends ShapeBorder {
 
   @override
   void paint(Canvas canvas, Rect rect, {TextDirection textDirection}) {
-    if(shape is BorderShape) {
+    if (shape is BorderShape) {
       (shape as BorderShape).drawBorder(canvas, rect);
     }
   }

@@ -32,12 +32,14 @@ class CircleShape extends Shape with BorderShape {
 
   @override
   void drawBorder(Canvas canvas, Rect rect) {
-    if(this.borderWidth > 0){
+    if (this.borderWidth > 0) {
       borderPaint.color = this.borderColor;
       borderPaint.strokeWidth = this.borderWidth;
-      canvas.drawCircle(rect.center, min((rect.width - borderWidth) /2.0, (rect.height - borderWidth) /2.0), borderPaint);
+      canvas.drawCircle(
+          rect.center,
+          min((rect.width - borderWidth) / 2.0,
+              (rect.height - borderWidth) / 2.0),
+          borderPaint);
     }
   }
-
-
 }

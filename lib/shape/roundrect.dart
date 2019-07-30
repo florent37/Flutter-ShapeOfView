@@ -62,28 +62,48 @@ class RoundRectShape extends Shape with BorderShape {
       path.quadraticBezierTo(right, top, right, top + topRightRadius);
     } else {
       final double arc = topRightRadius > 0 ? 90 : -270;
-      path.arcTo(Rect.fromLTRB(right - topRightRadius * 2.0, top, right, top + topRightRadius * 2.0), radians(-90), radians(arc), false);
+      path.arcTo(
+          Rect.fromLTRB(right - topRightRadius * 2.0, top, right,
+              top + topRightRadius * 2.0),
+          radians(-90),
+          radians(arc),
+          false);
     }
     path.lineTo(right, bottom - bottomRightRadius);
     if (useBezier) {
       path.quadraticBezierTo(right, bottom, right - bottomRightRadius, bottom);
     } else {
       final double arc = bottomRightRadius > 0 ? 90 : -270;
-      path.arcTo(Rect.fromLTRB(right - bottomRightRadius * 2.0, bottom - bottomRightRadius * 2.0, right, bottom), 0, radians(arc), false);
+      path.arcTo(
+          Rect.fromLTRB(right - bottomRightRadius * 2.0,
+              bottom - bottomRightRadius * 2.0, right, bottom),
+          0,
+          radians(arc),
+          false);
     }
     path.lineTo(left + bottomLeftRadius, bottom);
     if (useBezier) {
       path.quadraticBezierTo(left, bottom, left, bottom - bottomLeftRadius);
     } else {
       final double arc = bottomLeftRadius > 0 ? 90 : -270;
-      path.arcTo(Rect.fromLTRB(left, bottom - bottomLeftRadius * 2.0, left + bottomLeftRadius * 2.0, bottom), radians(90), radians(arc), false);
+      path.arcTo(
+          Rect.fromLTRB(left, bottom - bottomLeftRadius * 2.0,
+              left + bottomLeftRadius * 2.0, bottom),
+          radians(90),
+          radians(arc),
+          false);
     }
     path.lineTo(left, top + topLeftRadius);
     if (useBezier) {
       path.quadraticBezierTo(left, top, left + topLeftRadius, top);
     } else {
       final double arc = topLeftRadius > 0 ? 90 : -270;
-      path.arcTo(Rect.fromLTRB(left, top, left + topLeftRadius * 2.0, top + topLeftRadius * 2.0), radians(180), radians(arc), false);
+      path.arcTo(
+          Rect.fromLTRB(
+              left, top, left + topLeftRadius * 2.0, top + topLeftRadius * 2.0),
+          radians(180),
+          radians(arc),
+          false);
     }
     path.close();
 
