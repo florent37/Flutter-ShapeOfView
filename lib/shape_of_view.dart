@@ -81,7 +81,13 @@ class ShapeOfView extends StatelessWidget {
   final double height;
   final double width;
 
-  ShapeOfView({this.child, this.elevation = 4, this.shape, this.clipBehavior = Clip.antiAlias, this.width, this.height});
+  ShapeOfView(
+      {this.child,
+      this.elevation = 4,
+      this.shape,
+      this.clipBehavior = Clip.antiAlias,
+      this.width,
+      this.height});
 
   @override
   Widget build(BuildContext context) {

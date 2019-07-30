@@ -45,15 +45,19 @@ class ArcShape extends Shape {
         if (direction == ArcDirection.Outside) {
           return Path()
             ..lineTo(0.0, size.height - height)
-            ..quadraticBezierTo(size.width / 4, size.height, size.width / 2, size.height)
-            ..quadraticBezierTo(size.width * 3 / 4, size.height, size.width, size.height - height)
+            ..quadraticBezierTo(
+                size.width / 4, size.height, size.width / 2, size.height)
+            ..quadraticBezierTo(size.width * 3 / 4, size.height, size.width,
+                size.height - height)
             ..lineTo(size.width, 0.0)
             ..close();
         } else {
           return Path()
             ..moveTo(0.0, size.height)
-            ..quadraticBezierTo(size.width / 4, size.height - height, size.width / 2, size.height - height)
-            ..quadraticBezierTo(size.width * 3 / 4, size.height - height, size.width, size.height)
+            ..quadraticBezierTo(size.width / 4, size.height - height,
+                size.width / 2, size.height - height)
+            ..quadraticBezierTo(size.width * 3 / 4, size.height - height,
+                size.width, size.height)
             ..lineTo(size.width, 0.0)
             ..lineTo(0.0, 0.0)
             ..close();
@@ -70,7 +74,8 @@ class ArcShape extends Shape {
             ..close();
         } else {
           return Path()
-            ..quadraticBezierTo(height, size.height / 4, height, size.height / 2)
+            ..quadraticBezierTo(
+                height, size.height / 4, height, size.height / 2)
             ..quadraticBezierTo(height, size.height * 3 / 4, 0.0, size.height)
             ..lineTo(size.width, size.height)
             ..lineTo(size.width, 0.0)
@@ -81,16 +86,20 @@ class ArcShape extends Shape {
         if (direction == ArcDirection.Outside) {
           return Path()
             ..moveTo(size.width - height, 0.0)
-            ..quadraticBezierTo(size.width, size.height / 4, size.width, size.height / 2)
-            ..quadraticBezierTo(size.width, size.height * 3 / 4, size.width - height, size.height)
+            ..quadraticBezierTo(
+                size.width, size.height / 4, size.width, size.height / 2)
+            ..quadraticBezierTo(size.width, size.height * 3 / 4,
+                size.width - height, size.height)
             ..lineTo(0.0, size.height)
             ..lineTo(0.0, 0.0)
             ..close();
         } else {
           return Path()
             ..moveTo(size.width, 0.0)
-            ..quadraticBezierTo(size.width - height, size.height / 4, size.width - height, size.height / 2)
-            ..quadraticBezierTo(size.width - height, size.height * 3 / 4, size.width, size.height)
+            ..quadraticBezierTo(size.width - height, size.height / 4,
+                size.width - height, size.height / 2)
+            ..quadraticBezierTo(size.width - height, size.height * 3 / 4,
+                size.width, size.height)
             ..lineTo(0.0, size.height)
             ..lineTo(0.0, 0.0)
             ..close();

@@ -24,10 +24,12 @@ class PolygonShape extends Shape {
     final double centerY = height / 2;
 
     final Path polygonPath = new Path();
-    polygonPath.moveTo((centerX + radius * cos(0)), (centerY + radius * sin(0)));
+    polygonPath.moveTo(
+        (centerX + radius * cos(0)), (centerY + radius * sin(0)));
 
     for (int i = 1; i < numberOfSides; i++) {
-      polygonPath.lineTo((centerX + radius * cos(section * i)), (centerY + radius * sin(section * i)));
+      polygonPath.lineTo((centerX + radius * cos(section * i)),
+          (centerY + radius * sin(section * i)));
     }
 
     polygonPath.close();

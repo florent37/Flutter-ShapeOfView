@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:shape_of_view/shape_of_view.dart';
 
 class StarShape extends Shape {
-
   final int noOfPoints;
 
   StarShape({this.noOfPoints}) : assert(noOfPoints > 3);
@@ -20,7 +19,7 @@ class StarShape extends Shape {
 
     final int vertices = noOfPoints * 2;
     final double alpha = (2 * pi) / vertices;
-    final double radius = (height <= width? height : width) / 2.0;
+    final double radius = (height <= width ? height : width) / 2.0;
     final double centerX = width / 2;
     final double centerY = height / 2;
 

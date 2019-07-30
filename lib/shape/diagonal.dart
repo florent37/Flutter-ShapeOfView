@@ -4,37 +4,27 @@ import 'package:vector_math/vector_math.dart';
 import 'package:flutter/material.dart';
 import 'package:shape_of_view/shape_of_view.dart';
 
-enum DiagonalPosition {
-  Bottom,
-  Top,
-  Left,
-  Right
-}
+enum DiagonalPosition { Bottom, Top, Left, Right }
 
-enum DiagonalDirection {
-  Left,
-  Right
-}
+enum DiagonalDirection { Left, Right }
 
 class DiagonalAngle {
   final double angleRadians;
 
   const DiagonalAngle.radians({double angle = 0}) : angleRadians = angle;
 
-  DiagonalAngle.deg({double angle = 0})
-      : this.radians(angle: radians(angle));
+  DiagonalAngle.deg({double angle = 0}) : this.radians(angle: radians(angle));
 
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-          other is DiagonalAngle &&
-              runtimeType == other.runtimeType &&
-              angleRadians== other.angleRadians;
+      other is DiagonalAngle &&
+          runtimeType == other.runtimeType &&
+          angleRadians == other.angleRadians;
 
   @override
   int get hashCode => angleRadians.hashCode;
 }
-
 
 class DiagonalShape extends Shape {
   final DiagonalPosition position;
@@ -126,5 +116,4 @@ class DiagonalShape extends Shape {
     }
     return path;
   }
-
 }

@@ -14,13 +14,12 @@ class BubbleShape extends Shape {
 
   final double arrowPositionPercent;
 
-  BubbleShape({
-    this.position = BubblePosition.Bottom,
-    this.borderRadius = 12,
-    this.arrowHeight = 10,
-    this.arrowWidth = 10,
-    this.arrowPositionPercent = 0.5
-  });
+  BubbleShape(
+      {this.position = BubblePosition.Bottom,
+      this.borderRadius = 12,
+      this.arrowHeight = 10,
+      this.arrowWidth = 10,
+      this.arrowPositionPercent = 0.5});
 
   @override
   Path build({Rect rect, double scale}) {
@@ -30,15 +29,19 @@ class BubbleShape extends Shape {
   Path generatePath({Rect rect}) {
     final Path path = new Path();
 
-    double topLeftDiameter = max(borderRadius , 0);
-    double topRightDiameter = max(borderRadius , 0);
-    double bottomLeftDiameter = max(borderRadius , 0);
-    double bottomRightDiameter = max(borderRadius , 0);
+    double topLeftDiameter = max(borderRadius, 0);
+    double topRightDiameter = max(borderRadius, 0);
+    double bottomLeftDiameter = max(borderRadius, 0);
+    double bottomRightDiameter = max(borderRadius, 0);
 
-    final double spacingLeft = this.position == BubblePosition.Left ? arrowHeight : 0;
-    final double spacingTop = this.position == BubblePosition.Top ? arrowHeight : 0;
-    final double spacingRight = this.position == BubblePosition.Right ? arrowHeight : 0;
-    final double spacingBottom = this.position == BubblePosition.Bottom ? arrowHeight : 0;
+    final double spacingLeft =
+        this.position == BubblePosition.Left ? arrowHeight : 0;
+    final double spacingTop =
+        this.position == BubblePosition.Top ? arrowHeight : 0;
+    final double spacingRight =
+        this.position == BubblePosition.Right ? arrowHeight : 0;
+    final double spacingBottom =
+        this.position == BubblePosition.Bottom ? arrowHeight : 0;
 
     final double left = spacingLeft + rect.left;
     final double top = spacingTop + rect.top;
@@ -61,13 +64,16 @@ class BubbleShape extends Shape {
     //RIGHT, TOP
 
     if (position == BubblePosition.Right) {
-      path.lineTo(right, bottom - (bottom * (1 - arrowPositionPercent)) - arrowWidth);
+      path.lineTo(
+          right, bottom - (bottom * (1 - arrowPositionPercent)) - arrowWidth);
       path.lineTo(rect.right, bottom - (bottom * (1 - arrowPositionPercent)));
-      path.lineTo(right, bottom - (bottom * (1 - arrowPositionPercent)) + arrowWidth);
+      path.lineTo(
+          right, bottom - (bottom * (1 - arrowPositionPercent)) + arrowWidth);
     }
     path.lineTo(right, bottom - bottomRightDiameter / 2);
 
-    path.quadraticBezierTo(right, bottom, right - bottomRightDiameter / 2, bottom);
+    path.quadraticBezierTo(
+        right, bottom, right - bottomRightDiameter / 2, bottom);
     //RIGHT, BOTTOM
 
     if (position == BubblePosition.Bottom) {
@@ -81,9 +87,11 @@ class BubbleShape extends Shape {
     //LEFT, BOTTOM
 
     if (position == BubblePosition.Left) {
-      path.lineTo(left, bottom - (bottom * (1 - arrowPositionPercent)) + arrowWidth);
+      path.lineTo(
+          left, bottom - (bottom * (1 - arrowPositionPercent)) + arrowWidth);
       path.lineTo(rect.left, bottom - (bottom * (1 - arrowPositionPercent)));
-      path.lineTo(left, bottom - (bottom * (1 - arrowPositionPercent)) - arrowWidth);
+      path.lineTo(
+          left, bottom - (bottom * (1 - arrowPositionPercent)) - arrowWidth);
     }
     path.lineTo(left, top + topLeftDiameter / 2);
 
