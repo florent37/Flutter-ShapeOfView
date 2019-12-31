@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 export 'package:shape_of_view/shape/arc.dart';
+export 'package:shape_of_view/shape/bubble.dart';
 export 'package:shape_of_view/shape/circle.dart';
+export 'package:shape_of_view/shape/custom.dart';
 export 'package:shape_of_view/shape/cutcorner.dart';
 export 'package:shape_of_view/shape/diagonal.dart';
 export 'package:shape_of_view/shape/polygon.dart';
 export 'package:shape_of_view/shape/roundrect.dart';
 export 'package:shape_of_view/shape/star.dart';
 export 'package:shape_of_view/shape/triangle.dart';
-export 'package:shape_of_view/shape/bubble.dart';
-export 'package:shape_of_view/shape/custom.dart';
 
 abstract class Shape {
   Path build({Rect rect, double scale});
@@ -89,13 +89,15 @@ class ShapeOfView extends StatelessWidget {
   final double height;
   final double width;
 
-  ShapeOfView(
-      {this.child,
-      this.elevation = 4,
-      this.shape,
-      this.clipBehavior = Clip.antiAlias,
-      this.width,
-      this.height});
+  ShapeOfView({
+    Key key,
+    this.child,
+    this.elevation = 4,
+    this.shape,
+    this.clipBehavior = Clip.antiAlias,
+    this.width,
+    this.height,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
